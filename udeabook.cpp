@@ -14,15 +14,34 @@ bool sonCadenasIguales(const char* a, const char* b) {
 }
 
 UdeaBook:: UdeaBook (const char* ruta){
+    std::ifstream archivo(ruta);
+    if (!archivo.is_open()) {
+        std::cout << "Error: No se pudo abrir el archivo." << std::endl;
+    }
+    else{
+    int len = 0;
+    while (ruta[len] != '\0') len++;
 
+    this->rutaArchivoUsuarios = new char[len + 1];
+    for (int i = 0; i <= len; i++) {
+        this->rutaArchivoUsuarios[i] = ruta[i];
+    }
+    }
+}
+UdeaBook:: UdeaBook(){
+    const char defecto[] ="Usuarios.txt";
+    int len = 0;
+    while (defecto[len] != '\0') len++;
+
+    this->rutaArchivoUsuarios = new char[len + 1];
+    for (int i = 0; i <= len; i++) {
+        this->rutaArchivoUsuarios[i] = defecto[i];
+    }
 }
 
-void UdeaBook:: registrarUsuario(const char* nom, const char* clv){
-
-}
 
 bool UdeaBook:: existeUsuario(const char* nom) {
-    std::ifstream archivo("Usuarios.txt");
+    std::ifstream archivo(this->rutaArchivoUsuarios);
     if (!archivo.is_open()) {
         std::cout << "Error: No se pudo abrir el archivo." << std::endl;
         return false;
@@ -45,14 +64,7 @@ bool UdeaBook:: existeUsuario(const char* nom) {
     }
 
 
-void UdeaBook:: cargarDesdeArchivo(){
 
-}
-
-
-void UdeaBook::guardarEnArchivo(){
-
-}
 
 int  UdeaBook:: getContadorOperaciones() {
 

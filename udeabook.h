@@ -9,19 +9,15 @@ private:
 char* rutaArchivoUsuarios;
 Usuario* usuariosRegistrados;
 int cantUsuarios;
-int capacidadUsuarios;
-int ontadorOperaciones;
+int capacidadUsuarios=1000;
+int contadorOperaciones;
 public:
 
 UdeaBook (const char* ruta);
+UdeaBook();
 
-void registrarUsuario(const char* nom, const char* clv);
+bool existeUsuario(const char* nom) ;   //No hay que garantizar que se registren los usuarios. Osea que nos ahorramos la parte de registrar a usuarios bro,twin🫩✌️
 
-bool existeUsuario(const char* nom) ;
-
-void cargarDesdeArchivo();
-
-void guardarEnArchivo();
 
 int getContadorOperaciones() ;
 };
