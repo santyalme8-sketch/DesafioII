@@ -48,6 +48,7 @@ bool UdeaBook:: existeUsuario(const char* nom) {
     }
     char linea[256];
     for (; archivo.getline(linea, sizeof(linea)); ) {
+        this->contadorOperaciones++;
         int len = 0;
         while (linea[len] != '\0') len++;
         if (len > 0 && linea[len - 1] == '\r') {
@@ -64,8 +65,11 @@ bool UdeaBook:: existeUsuario(const char* nom) {
     }
 
 
+void  UdeaBook:: getContadorOperaciones() {
+    std::cout<<this->contadorOperaciones<<std::endl;
 
+}
 
-int  UdeaBook:: getContadorOperaciones() {
-
+void UdeaBook::reinicaroperaciones(){
+    this->contadorOperaciones=0;
 }

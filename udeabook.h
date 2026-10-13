@@ -19,7 +19,10 @@ UdeaBook();
 bool existeUsuario(const char* nom) ;   //No hay que garantizar que se registren los usuarios. Osea que nos ahorramos la parte de registrar a usuarios bro,twin🫩✌️
 
 
-int getContadorOperaciones() ;
+void getContadorOperaciones() ;
+void reinicaroperaciones();
+
 };
+
 
 #endif
