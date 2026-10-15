@@ -13,7 +13,8 @@ add_executable(DesafioII main.cpp
     udeabook.h
     usuario.h
     udeabook.cpp
-    usuario.cpp)
+    usuario.cpp
+    mensaje.cpp)
 
 include(GNUInstallDirs)
 install(TARGETS DesafioII

@@ -1,6 +1,6 @@
 #include "usuario.h"
 #include <iostream>
-
+class mensaje;
 Usuario::Usuario(const char* nombre){
     if (nombre != nullptr) {
         int longitud = 0;
@@ -23,3 +23,9 @@ Usuario::Usuario(const char* nombre){
     this-> buzon=0;
     this-> albumes=0;
 }
+void Usuario::Getnombre(){
+    std::cout<<this->nombre<<std::endl;
+}
+
+
+
