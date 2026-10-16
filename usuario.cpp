@@ -1,6 +1,10 @@
 #include "usuario.h"
 #include <iostream>
+#include "mensaje.h"
 class mensaje;
+
+
+
 Usuario::Usuario(const char* nombre){
     if (nombre != nullptr) {
         int longitud = 0;

@@ -27,6 +27,7 @@ UdeaBook:: UdeaBook (const char* ruta){
         this->rutaArchivoUsuarios[i] = ruta[i];
     }
     }
+    this->contadorOperaciones = 0;
 }
 UdeaBook:: UdeaBook(){
     const char defecto[] ="Usuarios.txt";
@@ -37,6 +38,7 @@ UdeaBook:: UdeaBook(){
     for (int i = 0; i <= len; i++) {
         this->rutaArchivoUsuarios[i] = defecto[i];
     }
+    this->contadorOperaciones = 0;
 }
 
 
