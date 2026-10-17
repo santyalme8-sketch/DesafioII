@@ -11,8 +11,9 @@ Usuario* usuariosRegistrados;
 int cantUsuarios;
 int capacidadUsuarios=1000;
 int contadorOperaciones;
-public:
 
+public:
+int& refContador();
 UdeaBook (const char* ruta);
 UdeaBook();
 

@@ -15,15 +15,16 @@ private:
     album* albumes;
 public:
     Usuario(const char* nombre);
-    void Getnombre();
-    //void crearAlbum(const char* titulo) No es necesario crear albumes, solo leerlos, osea menos trabajo por hacer
+    char* Getnombre();
     void agregarAmigo(const char* nombreAmigo);
     void EnviarMensaje(const char* dest,const char* texto);
+    void EnviarMensaje(const char* dest, const char* texto, int& contador);
     void RecibirMensaje(mensaje* nuevo);
-    void CargarMensajesALArchivo();
-    void LeerMensaje();
-    void LeerMensaje(const char* Remitente);
-    void LeerMensaje(int fechaini, int fechafin);
+    void CargarMensajesALArchivo(int& contador);
+
+    void LeerMensaje(int& contador);
+    void LeerMensaje(const char* Remitente, int& contador);
+    void LeerMensaje(int inicio, int fin, int& contador);
     void ListarAmigos();
 
 };

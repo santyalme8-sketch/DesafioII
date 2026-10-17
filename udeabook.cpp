@@ -75,3 +75,6 @@ void  UdeaBook:: getContadorOperaciones() {
 void UdeaBook::reinicaroperaciones(){
     this->contadorOperaciones=0;
 }
+int& UdeaBook::refContador() {
+    return this->contadorOperaciones;
+}
